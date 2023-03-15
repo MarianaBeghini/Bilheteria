@@ -26,8 +26,7 @@ namespace Bilheteria
             string resultado = null;
             foreach (DataRow RowFilmes in ds.Tables["TabelaFilmes"].Rows)
             {
-
-               
+                             
                 resultado = resultado + "NomeFilme: " + RowFilmes["nomeFilme"].ToString();
                
             }
