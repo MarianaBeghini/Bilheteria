@@ -16,22 +16,24 @@ namespace Bilheteria
         public VendasIngressos()
         {
             InitializeComponent();
-        }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
             DataAccessLayer dtAcess = new DataAccessLayer();
             DataSet ds = dtAcess.ExecuteQueryDataSet("select * from Filmes", new DataSet(), "TabelaFilmes");
-
-            string resultado = null;
+            DataSet ds2 = dtAcess.ExecuteQueryDataSet("select * from CadastroSala", new DataSet(), "TabelaCadastroSala");
+            //string resultado = null;
             foreach (DataRow RowFilmes in ds.Tables["TabelaFilmes"].Rows)
             {
-                             
-                resultado = resultado + "NomeFilme: " + RowFilmes["nomeFilme"].ToString();
-               
+                //resultado = resultado + "NomeFilme: " + RowFilmes["nomeFilme"].ToString();
+                cbFilme.Items.Add(RowFilmes["nomeFilme"].ToString());
             }
-            MessageBox.Show(resultado);
+            foreach (DataRow RowSalas in ds2.Tables["TabelaCadastroSala"].Rows)
+            {
 
+                cbSala.Items.Add(RowSalas["Sala"].ToString());
+            }
         }
+
+
+
     }
 }

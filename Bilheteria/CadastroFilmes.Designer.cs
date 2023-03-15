@@ -44,7 +44,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.textSala = new System.Windows.Forms.TextBox();
             this.Horário = new System.Windows.Forms.Label();
-            this.textHorario = new System.Windows.Forms.TextBox();
+            this.txbHorario = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // lblNomeFilme
@@ -182,19 +182,20 @@
             this.Horário.TabIndex = 15;
             this.Horário.Text = "Horário";
             // 
-            // textHorario
+            // txbHorario
             // 
-            this.textHorario.Location = new System.Drawing.Point(109, 256);
-            this.textHorario.Name = "textHorario";
-            this.textHorario.Size = new System.Drawing.Size(126, 20);
-            this.textHorario.TabIndex = 16;
+            this.txbHorario.Location = new System.Drawing.Point(109, 256);
+            this.txbHorario.Name = "txbHorario";
+            this.txbHorario.Size = new System.Drawing.Size(126, 20);
+            this.txbHorario.TabIndex = 16;
+            this.txbHorario.TextChanged += new System.EventHandler(this.textHorario_TextChanged);
             // 
             // CadastroFilmes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(355, 425);
-            this.Controls.Add(this.textHorario);
+            this.Controls.Add(this.txbHorario);
             this.Controls.Add(this.Horário);
             this.Controls.Add(this.textSala);
             this.Controls.Add(this.label2);
@@ -237,7 +238,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox textSala;
         private System.Windows.Forms.Label Horário;
-        private System.Windows.Forms.TextBox textHorario;
+        private System.Windows.Forms.TextBox txbHorario;
     }
 }
 

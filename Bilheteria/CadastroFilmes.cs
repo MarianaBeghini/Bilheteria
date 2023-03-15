@@ -32,6 +32,9 @@ namespace Bilheteria
 
             public string Resenha { get; set; }
 
+            public string Horario { get; set; }
+
+
             public Filme()
             {
                 classificacao = 18 ;
@@ -60,9 +63,10 @@ namespace Bilheteria
             Filmes.Categoria =  txbCategoria.Text.ToString();
             Filmes.Duracao = Int32.Parse(txbDuracao.Text);
             Filmes.Resenha = txbResenha.Text.ToString();
+            Filmes.Horario = txbHorario.Text.ToString();
 
             //string insert = "INSERT INTO FILMES VALUES (" + Filmes.nomeFilme + "," + Filmes.classificacao + "," + Filmes.Categoria + "," + Filmes.Duracao + "," + Filmes.Resenha + ")";
-            dtAcess.ExecuteNonQuery("INSERT INTO FILMES VALUES ('"+Filmes.nomeFilme+"',"+Filmes.classificacao+",'"+Filmes.Categoria+"',"+Filmes.Duracao+",'"+Filmes.Resenha+"')");
+            dtAcess.ExecuteNonQuery("INSERT INTO FILMES VALUES ('"+Filmes.nomeFilme+"',"+Filmes.classificacao+",'"+Filmes.Categoria+"',"+Filmes.Duracao+",'"+Filmes.Resenha+"," +Filmes.Horario+" ')");
             dtAcess.CloseConnection();
 
             MessageBox.Show("Informações registradas com sucesso");
@@ -96,6 +100,11 @@ namespace Bilheteria
         }
 
         private void CadastroFilmes_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textHorario_TextChanged(object sender, EventArgs e)
         {
 
         }
