@@ -18,7 +18,7 @@ namespace Bilheteria
     public partial class CadastroFilmes : Form
     {
         Thread nt;
-        
+        Thread nt2;
 
         public class Filme
         {
@@ -66,7 +66,7 @@ namespace Bilheteria
             Filmes.Horario = txbHorario.Text.ToString();
 
             //string insert = "INSERT INTO FILMES VALUES (" + Filmes.nomeFilme + "," + Filmes.classificacao + "," + Filmes.Categoria + "," + Filmes.Duracao + "," + Filmes.Resenha + ")";
-            dtAcess.ExecuteNonQuery("INSERT INTO FILMES VALUES ('"+Filmes.nomeFilme+"',"+Filmes.classificacao+",'"+Filmes.Categoria+"',"+Filmes.Duracao+",'"+Filmes.Resenha+"," +Filmes.Horario+" ')");
+            dtAcess.ExecuteNonQuery("INSERT INTO FILMES VALUES ('"+Filmes.nomeFilme+"',"+Filmes.classificacao+",'"+Filmes.Categoria+"',"+Filmes.Duracao+",'"+Filmes.Resenha+"','" +Filmes.Horario+" ')");
             dtAcess.CloseConnection();
 
             MessageBox.Show("Informações registradas com sucesso");
@@ -84,6 +84,7 @@ namespace Bilheteria
             txbCategoria.Text = "";
             txbDuracao.Text = "";
             txbResenha.Text = "";
+            txbHorario.Text = "";
         }
 
         private void btnCadastrar_Click(object sender, EventArgs e)
@@ -99,14 +100,16 @@ namespace Bilheteria
             Application.Run(new Cadastro_Sala());
         }
 
-        private void CadastroFilmes_Load(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
-
+            this.Close();
+            nt2 = new Thread(Bilheteria);
+            nt2.SetApartmentState(ApartmentState.STA);
+            nt2.Start();
         }
-
-        private void textHorario_TextChanged(object sender, EventArgs e)
+        private void Bilheteria()
         {
-
+            Application.Run(new BILHETERIA());
         }
     }
 

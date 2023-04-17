@@ -41,13 +41,15 @@
             this.txbClimatizado = new System.Windows.Forms.TextBox();
             this.backgroundWorker2 = new System.ComponentModel.BackgroundWorker();
             this.bntVendasIngressos = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.voltar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblNomeSala
             // 
             this.lblNomeSala.AutoSize = true;
             this.lblNomeSala.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNomeSala.Location = new System.Drawing.Point(43, 23);
+            this.lblNomeSala.Location = new System.Drawing.Point(43, 113);
             this.lblNomeSala.Name = "lblNomeSala";
             this.lblNomeSala.Size = new System.Drawing.Size(45, 20);
             this.lblNomeSala.TabIndex = 1;
@@ -55,7 +57,7 @@
             // 
             // txbLotacao
             // 
-            this.txbLotacao.Location = new System.Drawing.Point(171, 67);
+            this.txbLotacao.Location = new System.Drawing.Point(171, 150);
             this.txbLotacao.Name = "txbLotacao";
             this.txbLotacao.Size = new System.Drawing.Size(171, 20);
             this.txbLotacao.TabIndex = 2;
@@ -64,7 +66,7 @@
             // 
             this.Lotação.AutoSize = true;
             this.Lotação.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lotação.Location = new System.Drawing.Point(43, 65);
+            this.Lotação.Location = new System.Drawing.Point(42, 148);
             this.Lotação.Name = "Lotação";
             this.Lotação.Size = new System.Drawing.Size(74, 20);
             this.Lotação.TabIndex = 3;
@@ -72,7 +74,7 @@
             // 
             // txbSala
             // 
-            this.txbSala.Location = new System.Drawing.Point(171, 25);
+            this.txbSala.Location = new System.Drawing.Point(171, 113);
             this.txbSala.Name = "txbSala";
             this.txbSala.Size = new System.Drawing.Size(171, 20);
             this.txbSala.TabIndex = 4;
@@ -81,7 +83,7 @@
             // 
             this.Climatizado.AutoSize = true;
             this.Climatizado.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Climatizado.Location = new System.Drawing.Point(43, 145);
+            this.Climatizado.Location = new System.Drawing.Point(43, 218);
             this.Climatizado.Name = "Climatizado";
             this.Climatizado.Size = new System.Drawing.Size(102, 20);
             this.Climatizado.TabIndex = 6;
@@ -91,7 +93,7 @@
             // 
             this.Animação.AutoSize = true;
             this.Animação.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Animação.Location = new System.Drawing.Point(43, 104);
+            this.Animação.Location = new System.Drawing.Point(42, 183);
             this.Animação.Name = "Animação";
             this.Animação.Size = new System.Drawing.Size(88, 20);
             this.Animação.TabIndex = 7;
@@ -99,53 +101,84 @@
             // 
             // bntLimpar
             // 
-            this.bntLimpar.Location = new System.Drawing.Point(267, 213);
+            this.bntLimpar.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.bntLimpar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bntLimpar.Location = new System.Drawing.Point(322, 282);
             this.bntLimpar.Name = "bntLimpar";
-            this.bntLimpar.Size = new System.Drawing.Size(75, 23);
+            this.bntLimpar.Size = new System.Drawing.Size(84, 23);
             this.bntLimpar.TabIndex = 9;
             this.bntLimpar.Text = "Limpar";
-            this.bntLimpar.UseVisualStyleBackColor = true;
+            this.bntLimpar.UseVisualStyleBackColor = false;
             this.bntLimpar.Click += new System.EventHandler(this.bntLimpar_Click);
             // 
             // bntSalvar
             // 
-            this.bntSalvar.Location = new System.Drawing.Point(47, 213);
+            this.bntSalvar.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.bntSalvar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bntSalvar.Location = new System.Drawing.Point(40, 282);
             this.bntSalvar.Name = "bntSalvar";
-            this.bntSalvar.Size = new System.Drawing.Size(85, 22);
+            this.bntSalvar.Size = new System.Drawing.Size(91, 23);
             this.bntSalvar.TabIndex = 10;
             this.bntSalvar.Text = "Salvar";
-            this.bntSalvar.UseVisualStyleBackColor = true;
+            this.bntSalvar.UseVisualStyleBackColor = false;
             this.bntSalvar.Click += new System.EventHandler(this.bntSalvar_Click);
             // 
             // txbAnimacao
             // 
-            this.txbAnimacao.Location = new System.Drawing.Point(171, 106);
+            this.txbAnimacao.Location = new System.Drawing.Point(171, 183);
             this.txbAnimacao.Name = "txbAnimacao";
             this.txbAnimacao.Size = new System.Drawing.Size(171, 20);
             this.txbAnimacao.TabIndex = 11;
             // 
             // txbClimatizado
             // 
-            this.txbClimatizado.Location = new System.Drawing.Point(171, 145);
+            this.txbClimatizado.Location = new System.Drawing.Point(171, 218);
             this.txbClimatizado.Name = "txbClimatizado";
             this.txbClimatizado.Size = new System.Drawing.Size(171, 20);
             this.txbClimatizado.TabIndex = 12;
             // 
             // bntVendasIngressos
             // 
-            this.bntVendasIngressos.Location = new System.Drawing.Point(100, 258);
+            this.bntVendasIngressos.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.bntVendasIngressos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bntVendasIngressos.Location = new System.Drawing.Point(196, 352);
             this.bntVendasIngressos.Name = "bntVendasIngressos";
             this.bntVendasIngressos.Size = new System.Drawing.Size(210, 23);
             this.bntVendasIngressos.TabIndex = 13;
             this.bntVendasIngressos.Text = "Vendas de Ingressos";
-            this.bntVendasIngressos.UseVisualStyleBackColor = true;
+            this.bntVendasIngressos.UseVisualStyleBackColor = false;
             this.bntVendasIngressos.Click += new System.EventHandler(this.bntVendasIngressos_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("NSimSun", 26.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(41, 35);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(319, 35);
+            this.label1.TabIndex = 14;
+            this.label1.Text = "Cadastro de Sala";
+            // 
+            // voltar
+            // 
+            this.voltar.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.voltar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.voltar.Location = new System.Drawing.Point(41, 325);
+            this.voltar.Name = "voltar";
+            this.voltar.Size = new System.Drawing.Size(90, 23);
+            this.voltar.TabIndex = 15;
+            this.voltar.Text = "Voltar";
+            this.voltar.UseVisualStyleBackColor = false;
+            this.voltar.Click += new System.EventHandler(this.voltar_Click);
             // 
             // Cadastro_Sala
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(418, 450);
+            this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.ClientSize = new System.Drawing.Size(418, 387);
+            this.Controls.Add(this.voltar);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.bntVendasIngressos);
             this.Controls.Add(this.txbClimatizado);
             this.Controls.Add(this.txbAnimacao);
@@ -178,5 +211,7 @@
         private System.Windows.Forms.TextBox txbClimatizado;
         private System.ComponentModel.BackgroundWorker backgroundWorker2;
         private System.Windows.Forms.Button bntVendasIngressos;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button voltar;
     }
 }

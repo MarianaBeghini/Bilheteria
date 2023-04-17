@@ -17,6 +17,7 @@ namespace Bilheteria
 
 
         Thread nt2;
+        Thread nt3;
 
         public Cadastro_Sala()
         {
@@ -81,7 +82,20 @@ namespace Bilheteria
 
 
 
+        private void voltar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            nt3 = new Thread(CadastroFilmes);
+            nt3.SetApartmentState(ApartmentState.STA);
+            nt3.Start();
+        }
+
+        private void CadastroFilmes()
+        {
+            Application.Run(new CadastroFilmes());
+        }
     }
+
     
 
 } 

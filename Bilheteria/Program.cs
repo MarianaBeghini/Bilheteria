@@ -16,7 +16,7 @@ namespace Bilheteria
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new CadastroFilmes());
+            Application.Run(new BILHETERIA());
         }
     }
 }
